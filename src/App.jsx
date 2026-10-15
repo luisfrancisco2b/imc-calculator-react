@@ -1,12 +1,13 @@
+import ImcCalc from './components/ImcCalc'
+
 import './App.css'
 
-import HeaderProject from './components/HeaderProject'
 
 function App() {
 
   return (
-    <div>
-      <HeaderProject />
+    <div className="container">
+      <ImcCalc />
     </div>
 
   )
