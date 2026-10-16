@@ -2,12 +2,12 @@ button {
   text-transform: uppercase;
   padding: 1rem 1.5rem;
   border: none;
-  background-color: #f44236;
   color: #fff;
+  font-size: 0.9rem;
   flex: 1;
   cursor: pointer;
   transition: 0.3s ease;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 button:hover {
@@ -17,4 +17,12 @@ button:hover {
 
 button:active {
   transform: scale(0.91);
+}
+
+#calc-btn {
+  background-color: #32a858;
+}
+
+#clear-btn {
+  background-color: #a8324c;
 }
