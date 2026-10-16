@@ -5,7 +5,7 @@ import { Button } from './Button'
 const ImcCalc = () => {
     return (
         <div id="calc-container">
-            <h2>Imc Calc</h2>
+            <h2>Calculadora de IMC</h2>
 
             {/* Form */}
             <form id="calc-form">
