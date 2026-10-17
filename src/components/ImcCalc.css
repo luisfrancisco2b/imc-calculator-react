@@ -1,4 +1,4 @@
-/* Conatiner */
+/* Container */
 .container {
   min-width: 400px;
   min-height: 400px;
@@ -6,16 +6,22 @@
   background-color: #1d1e33;
 }
 
+/* Calc Container */
+
 #calc-container h2 {
   font-size: 2rem;
   margin: 0 auto;
 }
+
+/* Form Inputs */
 
 .form-inputs {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* Form Control */
 
 .form-control {
   display: flex;
@@ -43,3 +49,14 @@
   outline: none;
   border: 2px solid #03d6fc;
 }
+
+/* Action Control */
+
+.action-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+/* commitar */
