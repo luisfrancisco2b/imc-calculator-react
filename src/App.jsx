@@ -18,9 +18,12 @@ function App() {
 
     if (!height || !weight) return
 
-    console.log("Executou!")
+    const heightFloat = +height.replace(",", ".")
+    const weightFloat = +weight.replace(",", ".")
 
+    const imcResult = (weightFloat / (heightFloat * heightFloat)).toFixed(1)
 
+    setImc(imcResult)
   }
 
   const [imc, setImc] = useState("")
