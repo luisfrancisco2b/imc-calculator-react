@@ -1,3 +1,4 @@
+import { Button } from './Button'
 import './ImcTable.css'
 
 const ImcTable = ({ data }) => {
@@ -24,6 +25,7 @@ const ImcTable = ({ data }) => {
                     <h4>Obesidade</h4>
                 </div>
 
+                {/* Table Data */}
                 {data.map((item) => (
                     <div className="imc-table" key={item.info}>
                         <p>{item.classification}</p>
@@ -33,6 +35,10 @@ const ImcTable = ({ data }) => {
                 ))}
 
             </div>
+
+            {/* Back Button */}
+            <Button id="calc-btn" text="Voltar" />
+
         </div>
     )
 }
