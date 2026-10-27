@@ -1,5 +1,7 @@
 #result-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 #imc-number {
@@ -15,4 +17,23 @@
 #result-container h3 {
   margin-top: 1rem;
   color: #dfdfdf;
+}
+
+.imc-table {
+  margin: 1.6rem 0;
+  font-size: 0.8rem;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.table-header,
+.table-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #444;
 }
