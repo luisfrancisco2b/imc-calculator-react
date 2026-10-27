@@ -48,3 +48,24 @@
 .table-data p:nth-child(3) {
   max-width: 80px;
 }
+
+#back-btn {
+  align-self: center;
+  background-color: #a8324c;
+}
+
+.good {
+  color: #12db34;
+}
+
+.low {
+  color: #dbce12;
+}
+
+.medium {
+  color: #db6212;
+}
+
+.high {
+  color: #db1912;
+}
