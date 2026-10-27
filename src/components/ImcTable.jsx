@@ -6,7 +6,7 @@ const ImcTable = ({ data }) => {
         <div id="result-container">
 
             <p id="imc-number">
-                Seuc Imc:
+                Seu Imc:
             </p>
 
             <p id="imc-info">
@@ -27,7 +27,7 @@ const ImcTable = ({ data }) => {
 
                 {/* Table Data */}
                 {data.map((item) => (
-                    <div className="imc-table" key={item.info}>
+                    <div className="table-data" key={item.info}>
                         <p>{item.classification}</p>
                         <p>{item.info}</p>
                         <p>{item.obesity}</p>
@@ -37,7 +37,7 @@ const ImcTable = ({ data }) => {
             </div>
 
             {/* Back Button */}
-            <Button id="calc-btn" text="Voltar" />
+            <Button id="back-btn" text="Voltar" />
 
         </div>
     )
