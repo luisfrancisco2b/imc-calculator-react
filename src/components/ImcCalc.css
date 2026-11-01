@@ -52,10 +52,21 @@
 }
 
 /* Action Control */
-
 .action-control {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
   gap: 1rem;
+}
+
+/* Error Message */
+#error-message-container {
+  padding: 0.5rem;
+  margin: 1rem auto;
+}
+
+#error-message {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #e74c3c;
 }

@@ -4,7 +4,7 @@ import './ImcCalc.css'
 
 import { Button } from './Button'
 
-const ImcCalc = ({ calcImc }) => {
+const ImcCalc = ({ calcImc, error }) => {
 
     const [height, setHeight] = useState("")
     const [weight, setWeight] = useState("")
@@ -65,6 +65,11 @@ const ImcCalc = ({ calcImc }) => {
                     <Button id="calc-btn" text="Calcular" action={(e) => calcImc(e, height, weight)} />
 
                     <Button id="clear-btn" text="Limpar" action={clearForm} />
+                </div>
+
+                <div id="error-message-container">
+                    {/* Error Message */}
+                    {error && <p id="error-message">{error}</p>}
                 </div>
             </form>
 

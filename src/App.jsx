@@ -13,23 +13,35 @@ function App() {
   const [imc, setImc] = useState("")
   const [info, setInfo] = useState("")
   const [infoClass, setInfoClass] = useState("")
+  const [error, setError] = useState("")
 
   const calcImc = (e, height, weight) => {
 
     e.preventDefault()
 
-    if (!height || !weight) return
+    if (!height || !weight) {
+      setError("Preencha corretamente os campos de altura e peso!")
+      return
+    }
 
     const heightFloat = +height.replace(",", ".")
     const weightFloat = +weight.replace(",", ".")
 
     // Reject non numeric input and non positive values
-    if (!heightFloat || !weightFloat || heightFloat <= 0 || weightFloat <= 0) return
+    if (!heightFloat || !weightFloat || heightFloat <= 0 || weightFloat <= 0) {
+      setError("Os valores de altura e peso devem ser maiores do que 0!")
+    }
 
-    const imcResult = (weightFloat / (heightFloat * heightFloat)).toFixed(1)
+    const imcValue = (weightFloat / (heightFloat * heightFloat))
 
     // Rejects results that are not finite numbers
-    if (!Number.isFinite(imcResult)) return
+    if (!Number.isFinite(imcValue)) {
+      setError("Os valores informados não são válidos!")
+      return
+    }
+
+    setError("")
+    const imcResult = imcValue.toFixed(1)
 
     setImc(imcResult)
 
@@ -54,7 +66,7 @@ function App() {
 
   return (
     <div className="container">
-      {!imc ? <ImcCalc calcImc={calcImc} /> : <ImcTable data={data} imc={imc} info={info} infoClass={infoClass} resetCalc={resetCalc} />}
+      {!imc ? <ImcCalc calcImc={calcImc} error={error} /> : <ImcTable data={data} imc={imc} info={info} infoClass={infoClass} resetCalc={resetCalc} />}
     </div>
 
   )
