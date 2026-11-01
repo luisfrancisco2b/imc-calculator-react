@@ -1,16 +1,26 @@
 # 🧮 BMI Calculator (React)
 
-A BMI (IMC) calculator built with **React** and **Vite**. The user enters height and weight, and the app calculates the Body Mass Index and shows the result on a separate table page.
+A BMI (IMC) calculator built with **React** and **Vite**. The user enters height and weight, and the app calculates the Body Mass Index, classifies the result and shows it in a table, with a button to go back to the form.
 
 ## 🖼️ Preview
 
-![BMI calculator preview](./img/project-preview.png)
+**Form**
+
+![BMI calculator form](./img/project-preview.png)
+
+**Result**
+
+![BMI calculator result](./img/project-preview2.png)
 
 ## ✨ Features
 
 - ✅ Enter height and weight, accepting decimal commas (e.g. `1,71` and `78,5`)
 - ✅ Calculate the BMI and display the result
+- ✅ Show the BMI classification and the obesity level in a reference table
+- ✅ Highlight the current classification with a color
+- ✅ Show a message when the fields are empty or contain zero
 - ✅ Clear both input fields with the "Limpar" button
+- ✅ Go back to the form from the result page
 
 ## 🛠️ Tech Stack
 
@@ -41,9 +51,7 @@ A BMI (IMC) calculator built with **React** and **Vite**. The user enters height
 
 ## 🔮 Planned Improvements
 
-- [ ] Show the BMI classification (e.g. "Normal weight") in the result table
-- [ ] Highlight the classification with a color
-- [ ] Show a message when height or weight is empty
+- [ ] Make the layout responsive for mobile screens
 
 ---
 
