@@ -10,18 +10,26 @@ import './App.css'
 
 function App() {
 
+  const [imc, setImc] = useState("")
+  const [info, setInfo] = useState("")
+  const [infoClass, setInfoClass] = useState("")
+
   const calcImc = (e, height, weight) => {
 
     e.preventDefault()
-
-    console.log(height, weight)
 
     if (!height || !weight) return
 
     const heightFloat = +height.replace(",", ".")
     const weightFloat = +weight.replace(",", ".")
 
+    // Reject non numeric input and non positive values
+    if (!heightFloat || !weightFloat || heightFloat <= 0 || weightFloat <= 0) return
+
     const imcResult = (weightFloat / (heightFloat * heightFloat)).toFixed(1)
+
+    // Rejects results that are not finite numbers
+    if (!Number.isFinite(imcResult)) return
 
     setImc(imcResult)
 
@@ -43,10 +51,6 @@ function App() {
     setInfo("")
     setInfoClass("")
   }
-
-  const [imc, setImc] = useState("")
-  const [info, setInfo] = useState("")
-  const [infoClass, setInfoClass] = useState("")
 
   return (
     <div className="container">
